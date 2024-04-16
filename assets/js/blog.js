@@ -51,13 +51,41 @@ function addProject(event) {
         duration = `${differenceInDays} days`;
     }
 
+     // Get selected frameworks
+     let frameworks = [];
+     if (document.getElementById("nodejs").checked) {
+         frameworks.push("Node.js");
+     }
+     if (document.getElementById("next").checked) {
+         frameworks.push("Next.js");
+     }
+     if (document.getElementById("react").checked) {
+         frameworks.push("React.js");
+     }
+     if (document.getElementById("typescript").checked) {
+         frameworks.push("TypeScript");
+     }
+
+     function updateFileName(input) {
+        const fileNameTextbox = document.getElementById('file-name-textbox');
+        const chooseImageButton = document.getElementById('choose-image-btn');
+        if (input.files.length > 0) {
+            fileNameTextbox.value = input.files[0].name;
+            chooseImageButton.style.backgroundColor = '#007bff'; // Change button color
+        } else {
+            fileNameTextbox.value = '';
+            chooseImageButton.style.backgroundColor = '#00ff40'; // Reset button color
+        }
+    }
+
     dataProject.push({
         title: title,
         startdate: startdate,
         enddate: enddate,
         content: content,
         image: imageURL,
-        duration: duration
+        duration: duration,
+        frameworks: frameworks // Add selected frameworks to the project
     });
 
     console.log(dataProject);
@@ -85,8 +113,10 @@ function newData() {
             <h3>${project.title}</h3>
             <p>${project.startdate} - ${project.enddate}</p>
             <p>Duration: ${project.duration}</p>
+            <p>${project.frameworks}</p>
             <p>${project.content}</p>
         `;
+
 
         // Append project element to the listProjectContainer
         listProjectContainer.appendChild(projectElement);

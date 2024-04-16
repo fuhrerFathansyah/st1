@@ -1,56 +1,55 @@
-
 body {
-    margin: 0;
-  }
-  
-  /* navbar */
-  nav {
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #ffffff;
-    padding: 0 40px;
-  }
-  
-  nav .nav-left ul {
-    display: flex;
-    align-items: center;
-  }
-  
-  nav .nav-left ul img {
-    margin-right: 50;
-  }
-  
-  nav .nav-left ul li {
-    list-style-type: none;
-    margin-right: 30px;
-  }
-  
-  nav .nav-left ul li a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-  }
-  
-  nav .nav-left ul .active a {
-    color: #00ff40;
-  }
-  
-  nav .nav-right a {
-    text-decoration: none;
-    background-color: #00ff40;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-    margin-top: 20px;
-  }
-  
+  margin: 0;
+}
+
+/* navbar */ /* Styles for the navigation bar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 0 40px;
+}
+
+/* Styles for the left side of the navigation bar */
+nav .nav-left ul {
+  display: flex;
+  align-items: center;
+}
+
+nav .nav-left ul img {
+  margin-right: 50;
+}
+
+nav .nav-left ul li {
+  list-style-type: none;
+  margin-right: 30px;
+}
+
+nav .nav-left ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+nav .nav-left ul .active a {
+  color: #00ff40;
+}
+
+/* Styles for the right side of the navigation bar */
+nav .nav-right a {
+  text-decoration: none;
+  background-color: #00ff40;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+}
 
 */pemisah nih */
 
-/* Header styles */
- {
+/* Header styles */ {
   margin-left: auto 0;
   color: #00ff40;
 }
@@ -60,7 +59,6 @@ div form h1 {
   color: #000000;
 }
 
-
 /* Form styles */
 form {
   width: 600px;
@@ -69,14 +67,12 @@ form {
   background-color: #ffffff;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
 }
 
 form div {
   margin-bottom: 20px;
   margin-right: 20px;
 }
-
 
 label {
   display: block;
@@ -100,23 +96,84 @@ textarea {
   resize: none;
 }
 
-input[type="file"] {
-  margin-top: 5px;
-  color: #000000;
+
+
+/* Styling checkboxes */
+.checkbox-container {
+  margin-top: 10px;
 }
 
+.checkbox-container label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.checkbox-container input[type="checkbox"]:checked {
+  background-color: #00ff40;
+  border-color: #00ff40;
+}
+
+/* Styling image input */
+.input_container {
+  border: 1px solid #e5e5e5;
+  margin-top: 20px;
+}
+
+input[type=file]::file-selector-button {
+  background-color: #fff;
+  color: #000;
+  border: 0px;
+  border-right: 1px solid #e5e5e5;
+  padding: 10px 15px;
+  margin-right: 10px;
+  transition: .5s;
+}
+
+input[type=file]::file-selector-button:hover {
+  background-color: #eee;
+  border: 0px;
+  border-right: 1px solid #e5e5e5;
+}
+
+/* Styling submit button */
+button[type="input"] {
+  background-color: #00ff40;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button[type="input"]:hover {
+  background-color: #00cc33;
+}
 
 /* Project list styles */
 #list-project {
   display: flex;
   flex-wrap: wrap;
-  justify-content:center;
+  justify-content: center;
   margin-top: 20px;
 }
 
 /* Style for project item */
 .project {
-  width: calc(20.20% - 5px);
+  width: calc(20.2% - 5px);
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
