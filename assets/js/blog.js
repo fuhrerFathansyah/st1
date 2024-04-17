@@ -1,114 +1,103 @@
 var dataProject = [];
 
 function addProject(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    let title = document.getElementById("title").value;
-    let startdate = document.getElementById("startdate").value;
-    let enddate = document.getElementById("enddate").value;
-    let content = document.getElementById("content").value;
-    
+  let title = document.getElementById("title").value;
+  let startdate = document.getElementById("startdate").value;
+  let enddate = document.getElementById("enddate").value;
+  let content = document.getElementById("content").value;
 
-    if (title === "" || startdate === "" || enddate === "" || content === "") {
-        return alert("Please fill in all fields!"); // Menampilkan peringatan jika ada input yang kosong
-    }
+  if (title === "" || startdate === "" || enddate === "" || content === "") {
+    return alert("Please fill in all fields!"); // Menampilkan peringatan jika ada input yang kosong
+  }
 
-    let imageInput = document.getElementById("input-image");
-    
-    if (imageInput.files.length === 0) {
-        return alert("select an image!");
-    }
+  let imageInput = document.getElementById("input-image");
 
-    let image = imageInput.files[0];
-    let imageURL = URL.createObjectURL(image);
+  if (imageInput.files.length === 0) {
+    return alert("select an image!");
+  }
 
-    if (enddate < startdate) {
-        return alert("The end date is wrong!");
-    }
+  let image = imageInput.files[0];
+  let imageURL = URL.createObjectURL(image);
 
-    let startDatePart = startdate.split("/");
-    let endDatePart = enddate.split("/");
+  if (enddate < startdate) {
+    return alert("The end date is wrong!");
+  }
 
-    let formatStartDate = startDatePart[2] + "-" + startDatePart[1] + "-" + startDatePart[0];
-    let formatEndDate = endDatePart[2] + "-" + endDatePart[1] + "-" + endDatePart[0];
+  let startDatePart = startdate.split("/");
+  let endDatePart = enddate.split("/");
 
-    let newStartDate = new Date(formatStartDate);
-    let newEndDate = new Date(formatEndDate);
+  let formatStartDate =
+    startDatePart[2] + "-" + startDatePart[1] + "-" + startDatePart[0];
+  let formatEndDate =
+    endDatePart[2] + "-" + endDatePart[1] + "-" + endDatePart[0];
 
-    let timeDifference = newEndDate - newStartDate;
+  let newStartDate = new Date(formatStartDate);
+  let newEndDate = new Date(formatEndDate);
 
-    let differenceInDays = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-    let differenceInMonths = Math.floor(differenceInDays / 30.44);
-    let differenceInYears = Math.floor(differenceInMonths / 12);
+  let timeDifference = newEndDate - newStartDate;
 
-    let duration;
+  let differenceInDays = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  let differenceInMonths = Math.floor(differenceInDays / 30.44);
+  let differenceInYears = Math.floor(differenceInMonths / 12);
 
-    if (differenceInYears > 0) {
-        duration = `${differenceInYears} years`;
-    } else if (differenceInMonths > 0) {
-        duration = `${differenceInMonths} months`;
-    } else {
-        duration = `${differenceInDays} days`;
-    }
+  let duration;
 
-     // Get selected frameworks
-     let frameworks = [];
-     if (document.getElementById("nodejs").checked) {
-         frameworks.push("Node.js");
-     }
-     if (document.getElementById("next").checked) {
-         frameworks.push("Next.js");
-     }
-     if (document.getElementById("react").checked) {
-         frameworks.push("React.js");
-     }
-     if (document.getElementById("typescript").checked) {
-         frameworks.push("TypeScript");
-     }
+  if (differenceInYears > 0) {
+    duration = `${differenceInYears} years`;
+  } else if (differenceInMonths > 0) {
+    duration = `${differenceInMonths} months`;
+  } else {
+    duration = `${differenceInDays} days`;
+  }
 
-     function updateFileName(input) {
-        const fileNameTextbox = document.getElementById('file-name-textbox');
-        const chooseImageButton = document.getElementById('choose-image-btn');
-        if (input.files.length > 0) {
-            fileNameTextbox.value = input.files[0].name;
-            chooseImageButton.style.backgroundColor = '#007bff'; // Change button color
-        } else {
-            fileNameTextbox.value = '';
-            chooseImageButton.style.backgroundColor = '#00ff40'; // Reset button color
-        }
-    }
+  // Get selected frameworks
+  let frameworks = [];
+  if (document.getElementById("nodejs").checked) {
+    frameworks.push("Node.js");
+  }
+  if (document.getElementById("next").checked) {
+    frameworks.push("Next.js");
+  }
+  if (document.getElementById("react").checked) {
+    frameworks.push("React.js");
+  }
+  if (document.getElementById("typescript").checked) {
+    frameworks.push("TypeScript");
+  }
 
-    dataProject.push({
-        title: title,
-        startdate: startdate,
-        enddate: enddate,
-        content: content,
-        image: imageURL,
-        duration: duration,
-        frameworks: frameworks // Add selected frameworks to the project
-    });
+  dataProject.push({
+    title: title,
+    startdate: startdate,
+    enddate: enddate,
+    content: content,
+    image: imageURL,
+    duration: duration,
+    frameworks: frameworks, // Add selected frameworks to the project
+  });
 
-    console.log(dataProject);
+  console.log(dataProject);
 
-    newData();
+  newData();
 }
 
 function newData() {
-    var listProjectContainer = document.getElementById("list-project");
+  var listProjectContainer = document.getElementById("list-project");
 
-    // Clear existing projects
-    listProjectContainer.innerHTML = "";
+  // Clear existing projects
+  listProjectContainer.innerHTML = "";
 
-    // Loop through dataProject array and create project elements
-    for (let i = 0; i < dataProject.length; i++) {
-        const project = dataProject[i];
+  // Loop through dataProject array and create project elements
+  for (let i = 0; i < dataProject.length; i++) {
+    const project = dataProject[i];
 
-        // Create a new project element
-        var projectElement = document.createElement("div");
-        projectElement.classList.add("project");
+    // Create a new project element
+    var projectElement = document.createElement("div");
+    projectElement.classList.add("project");
 
-        // Populate project details
-        projectElement.innerHTML = `
+    // Populate project details
+    projectElement.innerHTML = `
             <img src="${project.image}" alt="This is the project image">
             <h3>${project.title}</h3>
             <p>${project.startdate} - ${project.enddate}</p>
@@ -117,8 +106,7 @@ function newData() {
             <p>${project.content}</p>
         `;
 
-
-        // Append project element to the listProjectContainer
-        listProjectContainer.appendChild(projectElement);
-    }
+    // Append project element to the listProjectContainer
+    listProjectContainer.appendChild(projectElement);
+  }
 }
