@@ -9,6 +9,7 @@ body {
     justify-content: space-between;
     background-color: #ffffff;
     padding: 0 40px;
+    width: auto;
   }
   
   nav .nav-left ul {
@@ -48,7 +49,7 @@ body {
   
 
   form {
-    width: 600px;
+    width: max-content;
     margin: 50px auto;
     padding: 20px;
     background-color: #ffffff;
@@ -120,3 +121,59 @@ body {
     margin: auto;
     padding: 20px;
   }
+
+  @media only all and (max-width: 1024px){
+
+    nav {
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #ffffff;
+      padding: 0px 40px;
+      width: auto;
+    }
+    
+
+  nav .nav-left ul {
+    display: flex;
+    align-items: center;
+    margin-left: -70px;
+  }
+  
+  nav .nav-left ul img {
+    margin-right: auto;
+  }
+  
+  nav .nav-left ul li {
+    list-style-type: none;
+    margin-right: 30px;
+  }
+  
+  nav .nav-left ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+  }
+  
+
+  
+  nav .nav-right a {
+    text-decoration: none;
+    background-color: #00ff40;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  }
+
+  @media only all and (max-width: 320px){
+    nav {
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #ffffff;
+      padding: 0px 40px;
+      width: 100%;
+    }
+  }
+  

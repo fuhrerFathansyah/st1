@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>  
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>my web</title>
+        <link href="../assets/css/contact.css" rel="stylesheet">
+        <link rel="shortcut icon" type="x-icon" href="../assets/img/echd.png">
+        <style>
+            body{
+              background: rgba(150, 150, 150, 0.1);
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-left">
+              <ul>
+                <img src="../assets/img/echd.png" alt="logo" 
+                style="width: 50px; margin-left: 10px;"/>
+                <li class="active">
+                  <a href="/" style="margin-left:20px; color: black;">Home</a>
+                </li>
+                <li>
+                  <a href="/blog">My Project</a>
+                </li>
+                <li>
+                  <a href="/testimonial">Testimonials</a>
+                </li>
+              </ul>
+            </div>
+      
+            <div class="nav-right">
+              <a href="contact" >Contact Me</a>
+            </div>
+          </nav>
+
+          <div class="blog-detail">
+      <div class="blog-detail-container">
+          <h1>{{data.id}}</h1>
+        <h1>{{data.title}}</h1>
+        <div class="author">Fathan Syah</div>
+        <img
+          src="{{data.image}}"
+          alt="detail"
+        />
+        <p>
+         {{data.content}}
+        </p>
+        <p class="card-text">Start Date: {{data.createdAt}}</p>
+        <p class="card-text">End Date: {{data.updatedAt}}</p>
+        <p class="card-text">Technologies: </p>
+              <ul class="card-text">
+                {{#if data.Node_JS}}
+                  <li>Node JS</li>
+                {{/if}}
+                {{#if data.React_JS}}
+                  <li>React JS</li>
+                {{/if}}
+                {{#if data.Next_JS}}
+                  <li>Next JS</li>
+                {{/if}}
+                {{#if data.Typescript}}
+                  <li>Typescript</li>
+                {{/if}}
+              </ul>
+      </div>
+    </div>
+
+        
+
+        <script src="../assets/js/contact.js"></script>
+    </body>
+    </html>

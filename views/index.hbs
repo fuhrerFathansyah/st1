@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>my web</title>
+    <link href="../assets/css/home.css" rel="stylesheet">
+    <link rel="shortcut icon" type="x-icon" href="../assets/img/echd.png" />
+    <style>
+      body {
+        background: rgba(150, 150, 150, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <ul>
+          <img src="../assets/img/echd.png" alt="logo" 
+          style="width: 50px; margin-left: 10px;"/>
+          <li class="active">
+            <a href="/" style="margin-left:20px; color: #00ff40;">Home</a>
+          </li>
+          <li>
+            <a href="blog">My Project</a>
+          </li>
+          <li>
+            <a href="testimonial">Testimonials</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-right">
+        <a href="contact">Contact Me</a>
+      </div>
+    </nav>
+
+{{#if messages.success}}
+  <div id="successMessage" style="padding: 20px; background-color: green; width:100%; color: white">
+    {{messages.success}}
+    <span style="float: right;">{{messages.timestamp}}</span> 
+  </div>
+{{/if}}
+
+<script>
+
+  const successMessage = document.getElementById('successMessage');
+
+
+  if (successMessage) {
+    setTimeout(function() {
+      successMessage.style.display = 'none';
+    }, 3000); 
+  }
+</script>
+
+    <form class="container">
+      <h1>hi welcome to dunyata</h1>
+      <p>
+        everything is a lie, this world is cruel. just some people will
+        realized that, everything in this world is not forever. death is just
+        a way to reach truth of life, a real life is not in this world. do you
+        know that? everything will end, we never know when, then can you ever
+        know why we have to exist in this world? not everyone know the answer,
+        are you seek a knowledge because you're right, or you seek a right
+        because you're knowledge? 'i learned that every mortal taste death,
+        but only some will taste life' -Rumi-
+      </p>
+      <div class="download-container">
+        <p>download CV</p>
+        <a href="https://google.com" target="_blank"> 
+          <img src="../assets/img/download.png" class="download-icon" />
+        </a>
+      </div>
+        <div class="social-icons">
+          <a href="https://google.com" target="_blank">
+            <img src="../assets/img/in.png" class="social-icon" />
+          </a>
+          <a href="https://google.com" target="_blank">
+            <img src="../assets/img/ig.png" class="social-icon" />
+          </a>
+          <a href="https://google.com" target="_blank">
+            <img src="../assets/img/fb.png" class="social-icon" />
+          </a>
+          <a href="https://google.com" target="_blank">
+            <img src="../assets/img/x.png" class="social-icon" />
+          </a>
+        </div>
+        <div class="box-shadow-container">
+        <div class="profile-container">
+          <img src="../assets/img/saya.jpg" class="profile-image" />
+          <div class="profile-text">
+            <h1>Fathan Syah</h1>
+            <p>Suaminya Echidna</p>
+          </div>
+        </div>
+      </div>
+      
+    </form>
+  </body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>  
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>my web</title>
+        <link href="../assets/css/testimonial.css" rel="stylesheet">
+        <link rel="shortcut icon" type="x-icon" href="../assets/img/echd.png">
+        <style>
+            body{
+              background: rgba(150, 150, 150, 0.1);
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-left">
+              <ul>
+                <img src="../assets/img/echd.png" alt="logo" 
+                style="width: 50px; margin-left: 10px;"/>
+                <li class="active">
+                  <a href="/" style="margin-left:20px; color: black;">Home</a>
+                </li>
+                <li>
+                  <a href="blog">My Project</a>
+                </li>
+                <li>
+                  <a href="testimonial" style="color: #00ff40;">Testimonials</a>
+                </li>
+              </ul>
+            </div>
+      
+            <div class="nav-right">
+              <a href="contact">Contact Me</a>
+            </div>
+          </nav>
+          <div class="container"></div>
+          <h1>My Testimonials</h1>
+          <div class="rating-allbuttons">
+            <h2>Rating by Star</h2>
+              <div id="rating-buttons" class="rating-allbuttons">
+                <button class="rating-button" onclick="allTestimonial()">All</button>
+                <button class="rating-button" onclick="filterTestimonial(5)">5 <i class="fa-star"> ✯</i></button>
+                <button class="rating-button" onclick="filterTestimonial(4)">4 <i class="fa-star"> ✯</i></button>
+                <button class="rating-button" onclick="filterTestimonial(3)">3 <i class="fa-star"> ✯</i></button>
+                <button class="rating-button" onclick="filterTestimonial(2)">2 <i class="fa-star"> ✯</i></button>
+                <button class="rating-button" onclick="filterTestimonial(1)">1 <i class="fa-star"> ✯</i></button>
+              </div>
+          </div>
+          <section class="testimonialborder" id="testimonial"></section>
+          </div>
+        <script src="../assets/js/testimonial-api.js"></script>
+    </body>
+</html>

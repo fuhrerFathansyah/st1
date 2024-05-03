@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>my web</title>
+    <link href="../assets/css/login.css" rel="stylesheet">
+    <link rel="shortcut icon" type="x-icon" href="../assets/img/echd.png" />
+    <style>
+      body {
+        background: rgba(150, 150, 150, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <ul>
+          <img src="../assets/img/echd.png" alt="logo" 
+          style="width: 50px; margin-left: 10px;"/>
+          <li class="active">
+            <a href="/" style="margin-left:20px;">Home</a>
+          </li>
+          <li>
+            <a href="blog">My Project</a>
+          </li>
+          <li>
+            <a href="testimonial">Testimonials</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-right">
+        <a href="contact">Contact Me</a>
+      </div>
+    </nav>
+            {{#if messages.danger}}
+          <div id="FailMessage"
+            style="padding: 20px; background-color: red; width:100%; color: white"
+          >
+            {{messages.danger}}
+            <span style="float: right;">{{messages.timestamp}}</span>
+          </div>
+        {{/if}}
+
+        <script>
+ 
+  const FailMessage = document.getElementById('FailMessage');
+
+
+  if (FailMessage) {
+    setTimeout(function() {
+      FailMessage.style.display = 'none';
+    }, 3000); 
+  }
+</script>
+
+
+
+    <div class="login-container">
+    <form action="/login" method="post" class="login-form">
+        <h2>Login</h2>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+</body>
+</html>

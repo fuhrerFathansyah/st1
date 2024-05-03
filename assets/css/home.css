@@ -1,0 +1,264 @@
+body {
+    margin: 0;
+  }
+  
+  /* navbar */
+  nav {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 0 40px;
+    width: auto;
+  }
+  
+  nav .nav-left ul {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav .nav-left ul img {
+    margin-right: 50;
+  }
+  
+  nav .nav-left ul li {
+    list-style-type: none;
+    margin-right: 30px;
+  }
+  
+  nav .nav-left ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+  }
+  
+
+  
+  nav .nav-right a {
+    text-decoration: none;
+    background-color: #00ff40;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  /*home */
+
+.container {
+  background-color: white;
+  box-shadow: 5px 5px 50px rgba(179, 178, 178, 1);
+  height: 650px;
+  width: 1700px;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  padding: 10px;
+}
+
+h1 {
+  margin-top: 100px;
+  margin-left: 100px;
+  font-size: 40px;
+}
+
+p {
+  margin-left: 100px;
+  margin-right: 800px;
+  font-family: Verdana;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.download-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .download-container p {
+    margin-right: 5px; /* Adjust as needed */
+  }
+  
+  .download-icon {
+    max-width: 30px;
+    margin-left: 5px; /* Adjust as needed */
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content:space-between;
+    width: 300PX;
+    margin-left: 100px;
+  }
+  
+  .social-icon {
+    max-width: 50px;
+    margin-top: 30px; /* Adjust the margin as needed */
+  }
+
+  .box-shadow-container {
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+    margin-left: auto;
+    margin-right: 125px;
+    margin-top: -450px;
+    border-radius: 10px;
+    height: 500px;
+    width: 500px;
+  }
+  
+  .profile-container {
+    align-items: center;
+  }
+  
+  .profile-text h1 {
+    margin-top: -300px;
+    margin-left: 150px;
+    margin-bottom: 0px;
+  }
+
+  .profile-text p {
+    margin: 0; /* Remove default margins */
+    margin-left: 170px;
+  }
+  
+  .profile-image {
+    width: 500px; 
+    margin-bottom: 300px;
+  }
+  
+  @media only all and (max-width: 1024px){
+
+        nav {
+          display:flex;
+          align-items: center;
+          justify-content: space-between;
+          background-color: #ffffff;
+          padding: 0px 40px;
+          width: auto;
+          height: 200px;
+        }
+        
+    
+      nav .nav-left ul {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        font-size: 40px;
+      }
+      
+      nav .nav-left ul img {
+        margin-right: auto;
+      }
+      
+      nav .nav-left ul li {
+        list-style-type: none;
+        margin-right: 30px;
+      }
+      
+      nav .nav-left ul li a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+      }
+      
+    
+      
+      nav .nav-right a {
+        text-decoration: none;
+        background-color: #00ff40;
+        padding: 20px;
+        color: white;
+        font-weight: bold;
+        margin-top: 20px;
+        font-size: 40px;
+      }
+      
+  
+
+    body {
+        background: rgba(150, 150, 150, 0.1);
+      }
+      
+      .container {
+        background-color: white;
+        box-shadow: 5px 5px 50px rgb(179, 178, 178, 1);
+        height: auto;
+        width: auto;
+        border-radius: 10px;
+        margin: auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        padding: 20px; 
+      }
+      
+      .container h1 {
+        margin-top: 100px;
+        margin-left: 150px;
+        font-size: 40px;
+      }
+      
+      .container p {
+        margin-left: 150px;
+        margin-right: 150px;
+        font-family: Verdana;
+        font-size: 20px;
+        text-align: justify;
+      }
+
+      .download-container {
+        display: flex;
+        align-items: center;
+      }
+      
+      .download-container p {
+        margin-right: 5px; /* Adjust as needed */
+      }
+      
+      .download-icon {
+        max-width: 30px;
+        margin-left: 5px; /* Adjust as needed */
+      }
+      
+      .social-icons {
+        display: flex;
+        justify-content:space-between;
+        width: 300PX;
+        margin-left: 350px;
+        margin-top: -10px;
+      }
+      
+      .social-icon {
+        max-width: 50px;
+        margin-top: 30px; /* Adjust the margin as needed */
+      }
+    
+      .box-shadow-container {
+        box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        margin-top: 40px;
+        margin-left: 250px;
+        height: 500px;
+        width: 500px;
+        margin-bottom: 50px;
+      }
+
+      .profile-text h1 {
+        margin-top: -300px;
+        margin-left: 150px;
+        margin-bottom: 0px;
+      }
+    
+      .profile-text p {
+        margin: 0; /* Remove default margins */
+        margin-left: 170px;
+      }
+      
+      .profile-image {
+        width: 500px; 
+        margin-bottom: 300px;
+      }
+
+    }
+
+  
